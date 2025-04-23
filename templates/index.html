@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 Text-to-Image Generator</h1>
+      <p class="subtitle">Powered by Stable Diffusion</p>
+
+      <form action="/generate" method="POST">
+        <input
+          type="text"
+          name="prompt"
+          placeholder="Describe an image..."
+          required
+        />
+        <button type="submit">Generate Image</button>
+      </form>
+
+      {% if prompt %}
+      <div class="result">
+        <h2>Prompt: <span>{{ prompt }}</span></h2>
+        <img src="{{ image_url }}" alt="Generated Image" />
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

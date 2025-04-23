@@ -1,0 +1,6 @@
+torch
+flask
+diffusers
+transformers
+accelerate
+Pillow
