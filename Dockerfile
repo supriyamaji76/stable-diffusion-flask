@@ -28,7 +28,7 @@ ENV PATH="/app/venv/bin:$PATH"
 ENV FLASK_ENV=production
 
 # Expose Flask port
-EXPOSE 5000
+EXPOSE 5001
 
 # Run the Flask app
 CMD ["python", "app.py"]
